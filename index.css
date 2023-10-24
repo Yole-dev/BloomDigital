@@ -80,7 +80,7 @@ header > img  {
 
 header section:first-of-type > p:first-of-type {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -89,6 +89,7 @@ header section:first-of-type > p:nth-child(2) {
     font-weight: 500;
     margin-top: 1rem;
     color: #898784;
+    font-size: 14px;
 }
 
 header section:first-of-type > div:first-of-type {
@@ -145,7 +146,7 @@ header section:last-of-type img {
 
 header section:last-of-type > p:first-of-type {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -154,6 +155,7 @@ header section:last-of-type > p:last-of-type {
     font-weight: 600;
     margin-top: 1rem;
     color: #898784;
+    font-size: 14px;
 }
 
 /* in desktop view make flex-direction = row */
@@ -246,15 +248,17 @@ main > img:first-of-type {
 
 main > p:first-of-type {
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     text-align: center;
 }
 
 main > p:last-of-type {
     font-weight: 600;
+    font-size: 13px;
     color: white;
     margin-top: 1rem;
+    text-align: center;
 }
 
 main section {
@@ -359,7 +363,7 @@ main > div {
 }
 
 main > div > p {
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -370,14 +374,11 @@ main > div > div {
     margin-top: 2rem;
 }
 
-main > div > div > div p:first-of-type{
-    font-size: 2rem;
+main > div > div > div p{
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
-main > div > div > div p:last-of-type {
-    font-weight: 500;
-}
 
 /* may probably have to change the font family for this span text */
 
