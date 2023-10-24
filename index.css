@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap');
 /* default styles */
 * {
     padding: 0;
@@ -67,6 +68,7 @@ header section:first-of-type {
     padding: 1rem;
 }
 
+/* change image position in desktop view */
 header > img  {
     width: 60px;
     position: relative;
@@ -106,6 +108,7 @@ header section:first-of-type > div:first-of-type > button:nth-child(2) {
     background: #EE4200;
 }
 
+/* in desktop view make flex-direction = row */
 header section:first-of-type > div:last-of-type {
     display: flex;
     flex-direction: column;
@@ -121,7 +124,7 @@ header section:first-of-type > div:last-of-type > p {
 header section:first-of-type > div:last-of-type > div {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 header section:last-of-type {
@@ -129,18 +132,21 @@ header section:last-of-type {
     margin: 4rem 0;
 }
 
+
+/* change image scale rotation, position in desktop view */
+
 header section:last-of-type img {
-    width: 130px;
+    width: 150px;
     position: relative;
-    top: 8.5rem;
-    right: 0.8rem;
+    top: 11.5rem;
+    right: 2.9rem;
+    transform: scale(-1, 1)  rotate(90deg);
 }
 
 header section:last-of-type > p:first-of-type {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 600;
-    /* z-index: 9; */
 }
 
 header section:last-of-type > p:last-of-type {
@@ -150,6 +156,7 @@ header section:last-of-type > p:last-of-type {
     color: #898784;
 }
 
+/* in desktop view make flex-direction = row */
 header section:last-of-type > div {
     display: flex;
     flex-direction: column;
@@ -221,4 +228,161 @@ header section:last-of-type > div > div > a {
 
 main {
     background: #111111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem 1rem;
+}
+
+/* change image rotation, position in desktop view */
+main > img:first-of-type {
+    width: 150px;
+    transform: rotate(270deg);
+    position: relative;
+    top: 11rem;
+    left: 75%;
+    margin-top: -5rem;
+}
+
+main > p:first-of-type {
+    font-weight: 500;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+
+main > p:last-of-type {
+    font-weight: 600;
+    color: white;
+    margin-top: 1rem;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+/* in desktop view make flex-direction = row */
+main section div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main section div:first-of-type > img {
+    width: 85%;
+    align-self: center;
+}
+
+/* in desktop view make flex-direction = row */
+main section div:first-of-type > div{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 100%;
+}
+
+main section div:first-of-type > div > img {
+    width: 70%;
+}
+
+main section div:first-of-type > div > img:first-of-type {
+    border-radius: 10%;
+}
+
+/* change align-self in desktop view */
+main section div:first-of-type > div > img:last-of-type {
+    align-self: flex-end;
+}
+
+/* remove margin-top in desktop view and make gap smaller in desktop view */
+main section div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+main section div:last-of-type img {
+    width: 70%;
+    border-radius: 10%;
+}
+
+main section div:last-of-type img:last-of-type {
+    align-self: flex-end;
+}
+
+/* make these styles display none in desktop view */
+
+main section > img:first-of-type {
+    transform: rotate(270deg);
+    position: relative;
+    top: 16.8rem;
+    left: 18rem; 
+    width: 150px;
+}
+
+main section > img:nth-of-type(2) {
+    transform: scale(-1, 1) rotate(270deg);
+    position: relative;
+    top: 30.6rem;
+    width: 130px;
+    margin-top: -13rem;
+}
+
+main section > img:nth-of-type(3) {
+    width: 110px;
+    position: relative;
+    transform: rotate(90deg);
+    bottom: 18.5rem;
+    left: 2.7rem;
+}
+
+main section > img:last-of-type {
+    width: 75px;
+    position: relative;
+    transform: scale(-1, 1)  rotate(90deg);
+    bottom: 25rem;
+    left: 23.8rem;
+    margin-bottom: -8.5rem;
+}
+
+/* end here */
+
+main > div {
+    color: white;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+main > div > p {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+main > div > div {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+main > div > div > div p:first-of-type{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+main > div > div > div p:last-of-type {
+    font-weight: 500;
+}
+
+/* may probably have to change the font family for this span text */
+
+main > div > div > div span {
+    color: #FFB800;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
 }
