@@ -16,6 +16,7 @@ button {
     border: solid 2px black;
     font-weight: 500;
     box-shadow: 4px 5px 1px black;
+    font-family: 'Work Sans', sans-serif;
 }
 
 /* button:focus {
@@ -40,6 +41,45 @@ nav {
     padding: 1rem;
 }
 
+/* inserting mobileNav here, set display as none in desktop view*/
+
+.mobileNavContainer {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1111117a;
+    z-index: 999;
+}
+
+.mobileNav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    background-color: rgb(255, 248, 241);
+    border: solid 2px black ;
+    padding: 1rem;
+    box-shadow: 4px 5px 1px black;
+}
+
+.mobileNav ul {
+    list-style: none;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mobileNav button {
+    background: #0755E9;
+    color: white;
+    font-weight: 500;
+}
+
+/* give display of flex in desktop view */
 .desktopNav {
     display: none;
     gap: 1.7rem;
@@ -284,10 +324,11 @@ main section div:first-of-type {
 main section div:first-of-type > div:first-of-type {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 main section div:first-of-type > div:first-of-type img {
-    width: 85%;
+    width: 80%;
 }
 
 /* in desktop view make flex-direction = row  also adjust width in desktop view*/
