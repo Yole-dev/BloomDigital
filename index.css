@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
 /* default styles */
 * {
     padding: 0;
@@ -17,6 +17,10 @@ button {
     font-weight: 500;
     box-shadow: 4px 5px 1px black;
 }
+
+/* button:focus {
+    
+} */
 
 body {
     font-family: 'Work Sans', sans-serif;
@@ -268,36 +272,43 @@ main section {
     margin-top: 3rem;
 }
 
-/* in desktop view make flex-direction = row */
+/* in desktop view make flex-direction = row also change align-items to center*/
 main section div:first-of-type {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 2rem;
 }
 
-main section div:first-of-type > img {
-    width: 85%;
-    align-self: center;
+
+main section div:first-of-type > div:first-of-type {
+    display: flex;
+    align-items: center;
 }
 
-/* in desktop view make flex-direction = row */
-main section div:first-of-type > div{
+main section div:first-of-type > div:first-of-type img {
+    width: 85%;
+}
+
+/* in desktop view make flex-direction = row  also adjust width in desktop view*/
+main section div:first-of-type > div:last-of-type {
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
+    align-items: flex-start;
     width: 100%;
 }
 
-main section div:first-of-type > div > img {
+/* adjust width in desktop view */
+main section div:first-of-type > div:last-of-type > img {
     width: 70%;
 }
 
-main section div:first-of-type > div > img:first-of-type {
+main section div:first-of-type > div:last-of-type > img:first-of-type {
     border-radius: 10%;
 }
 
 /* change align-self in desktop view */
-main section div:first-of-type > div > img:last-of-type {
+main section div:first-of-type > div:last-of-type > img:last-of-type {
     align-self: flex-end;
 }
 
@@ -370,6 +381,7 @@ main > div > p {
 }
 
 main > div > div:first-of-type {
+    justify-self: center;
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -386,7 +398,7 @@ main > div > div:first-of-type > div p{
 
 main > div > div:first-of-type> div span {
     color: #FFB800;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Nunito', sans-serif;
     font-weight: 600;
 }
 
