@@ -8,33 +8,37 @@
 </head>
 <body>
     <header>
-        <nav>
-            <img src="images/headerLogo.svg" alt="">
+        <nav class="navBar">
+            <img src="images/headerLogo.svg">
 
             <div class="desktopNav">
                 <ul>
-                    <li>Services <ion-icon name="chevron-down-outline"></ion-icon></li>
-                    <li>Our Work</li>
-                    <li>About Us</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
+                    <a href="#"><li>Services <ion-icon name="chevron-down-outline"></ion-icon></li></a>
+                    <a href="#"><li>Our Work</li></a>
+                    <a href="#"><li>About Us</li></a>
+                    <a href="#"><li>Blog</li></a>
+                    <a href="#"><li>Contact</li></a>
                 </ul>
 
                 <button>Register</button>
             </div>
 
-            <ion-icon name="ellipsis-vertical-outline" class="navOpen"></ion-icon>
-            <ion-icon name="close-outline" class="displayNone"></ion-icon>
+            <ion-icon name="ellipsis-vertical-outline" class="openNav"></ion-icon>
         </nav>
 
         <div class="mobileNavContainer">
+            <div class="header">
+                <img src="images/headerLogo.svg" alt="">
+                <ion-icon name="close-outline" class="displayNone closeNav"></ion-icon>
+            </div>
+
             <div class="mobileNav">
                 <ul>
-                    <li>Services <ion-icon name="chevron-down-outline"></ion-icon></li>
-                    <li>Our Work</li>
-                    <li>About Us</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
+                    <a href="#"><li>Services <ion-icon name="chevron-down-outline"></ion-icon></li></a>
+                    <a href="#"><li>Our Work</li></a>
+                    <a href="#"><li>About Us</li></a>
+                    <a href="#"><li>Blog</li></a>
+                    <a href="#"><li>Contact</li></a>
                 </ul>
 
                 <button>Register</button>
