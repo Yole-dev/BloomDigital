@@ -20,3 +20,19 @@ closeNav.addEventListener('click', function(){
     closeNav.classList.toggle('displayNone');
     openNav.classList.toggle('displayNone');
 })
+
+const chevronDown = document.querySelector('.chevronDown');
+const chevronUp = document.querySelector('.chevronUp');
+const subNav = document.querySelector('.subNav');
+
+chevronDown.addEventListener('click', function(){
+    chevronUp.classList.toggle('displayNone');
+    chevronDown.classList.toggle('displayNone');
+    subNav.style.display = 'flex';
+})
+
+chevronUp.addEventListener('click', function(){
+    chevronUp.classList.toggle('displayNone');
+    chevronDown.classList.toggle('displayNone');
+    subNav.style.display = 'none';
+})

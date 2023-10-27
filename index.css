@@ -96,7 +96,7 @@ nav {
 }
 
 /* try inserting transition here later */
-.mobileNav ul a::after {
+.mobileNav ul > a::after {
     content: ' ';
     background: #0755E9;
     display: none;
@@ -111,6 +111,14 @@ nav {
     display: inline-block;
 }
 
+.subNav {
+    display: none;
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 0.7rem;
+    border: solid 2px black;
+    box-shadow: 4px 5px 1px black;
+}
 
 
 .mobileNav button {
@@ -373,7 +381,7 @@ main > p:last-of-type {
     text-align: center;
 }
 
-main section {
+main section:first-of-type {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -381,7 +389,7 @@ main section {
 }
 
 /* in desktop view make flex-direction = row also change align-items to center*/
-main section div:first-of-type {
+main section:first-of-type div:first-of-type {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -389,18 +397,18 @@ main section div:first-of-type {
 }
 
 
-main section div:first-of-type > div:first-of-type {
+main section:first-of-type div:first-of-type > div:first-of-type {
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-main section div:first-of-type > div:first-of-type img {
+main section:first-of-type div:first-of-type > div:first-of-type img {
     width: 80%;
 }
 
 /* in desktop view make flex-direction = row  also adjust width in desktop view*/
-main section div:first-of-type > div:last-of-type {
+main section:first-of-type div:first-of-type > div:last-of-type {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -408,21 +416,21 @@ main section div:first-of-type > div:last-of-type {
 }
 
 /* adjust width in desktop view */
-main section div:first-of-type > div:last-of-type > img {
+main section:first-of-type div:first-of-type > div:last-of-type > img {
     width: 70%;
 }
 
-main section div:first-of-type > div:last-of-type > img:first-of-type {
+main section:first-of-type div:first-of-type > div:last-of-type > img:first-of-type {
     border-radius: 10%;
 }
 
 /* change align-self in desktop view */
-main section div:first-of-type > div:last-of-type > img:last-of-type {
+main section:first-of-type div:first-of-type > div:last-of-type > img:last-of-type {
     align-self: flex-end;
 }
 
 /* remove margin-top in desktop view and make gap smaller in desktop view */
-main section div:last-of-type {
+main section:first-of-type div:last-of-type {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -430,18 +438,18 @@ main section div:last-of-type {
     margin-top: 2rem;
 }
 
-main section div:last-of-type img {
+main section:first-of-type div:last-of-type img {
     width: 70%;
     border-radius: 10%;
 }
 
-main section div:last-of-type img:last-of-type {
+main section:first-of-type div:last-of-type img:last-of-type {
     align-self: flex-end;
 }
 
 /* make these styles display none in desktop view */
 
-main section > img:first-of-type {
+/* main section:first-of-type > img:first-of-type {
     transform: rotate(270deg);
     position: relative;
     top: 16.8rem;
@@ -449,7 +457,7 @@ main section > img:first-of-type {
     width: 150px;
 }
 
-main section > img:nth-of-type(2) {
+main section:first-of-type > img:nth-of-type(2) {
     transform: scale(-1, 1) rotate(270deg);
     position: relative;
     top: 30.6rem;
@@ -457,7 +465,7 @@ main section > img:nth-of-type(2) {
     margin-top: -13rem;
 }
 
-main section > img:nth-of-type(3) {
+main section:first-of-type > img:nth-of-type(3) {
     width: 110px;
     position: relative;
     transform: rotate(90deg);
@@ -465,18 +473,18 @@ main section > img:nth-of-type(3) {
     left: 2.7rem;
 }
 
-main section > img:last-of-type {
+main section:first-of-type > img:last-of-type {
     width: 75px;
     position: relative;
     transform: scale(-1, 1)  rotate(90deg);
     bottom: 25rem;
     left: 23.8rem;
     margin-bottom: -8.5rem;
-}
+} */
 
 /* end here */
 
-main > div {
+main > div:first-of-type {
     color: white;
     margin-top: 2rem;
     text-align: center;
@@ -484,12 +492,12 @@ main > div {
     flex-direction: column;
 }
 
-main > div > p {
+main > div:first-of-type > p {
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-main > div > div:first-of-type {
+main > div:first-of-type > div:first-of-type {
     justify-self: center;
     display: flex;
     justify-content: center;
@@ -497,7 +505,7 @@ main > div > div:first-of-type {
     margin-top: 2rem;
 }
 
-main > div > div:first-of-type > div p{
+main > div:first-of-type > div:first-of-type > div p{
     font-size: 1.2rem;
     font-weight: 500;
 }
@@ -505,13 +513,13 @@ main > div > div:first-of-type > div p{
 
 /* may probably have to change the font family for this span text */
 
-main > div > div:first-of-type> div span {
+main > div:first-of-type > div:first-of-type> div span {
     color: #FFB800;
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
 }
 
-main > div > div:last-of-type {
+main > div:first-of-type > div:last-of-type {
     width: 50px;
     height: 50px;
     margin-top: 2rem;
@@ -533,3 +541,80 @@ main > div > div:last-of-type {
     right: 0.5rem;
     top: 0.9rem;
 }
+
+/* carousel/testimonial section */
+
+body > section {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 248, 241);
+    text-align: center;
+}
+
+body > section > p:first-of-type {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+body > section > p:nth-of-type(2){
+    padding: 0 1rem;
+    font-weight: 500;
+    color: #898784;
+    font-size: 14px;
+}
+
+.embla {
+    align-self: center;
+    margin-top: 4rem;
+    width: 100%;
+    height: 300px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.embla__container {
+    display: flex;
+}
+
+.embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.embla__slide > div {
+    border: solid 2px black;
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 4px 5px 1px black;
+}
+
+
+.embla__slide > div > div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.embla__slide > div > div img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: dashed 2px #898784;
+}
+
+.embla__slide > div p {
+    font-weight: 600;
+}
+
+.embla__slide > div small {
+    color: #898784;
+}
+
