@@ -96,7 +96,7 @@ nav {
 }
 
 /* try inserting transition here later */
-.mobileNav ul > a::after {
+.mobileNav ul a::after {
     content: ' ';
     background: #0755E9;
     display: none;
@@ -116,6 +116,7 @@ nav {
     flex-direction: column;
     padding: 0.5rem;
     gap: 0.7rem;
+    background-color: white;
     border: solid 2px black;
     box-shadow: 4px 5px 1px black;
 }
@@ -569,6 +570,7 @@ body > section > p:nth-of-type(2){
     align-self: center;
     margin-top: 4rem;
     width: 100%;
+    height: 350px;
     text-align: left;
     overflow: hidden;
 }
@@ -582,6 +584,7 @@ body > section > p:nth-of-type(2){
 
 .controller > button {
     border-radius: 100%;
+    background: white;
     /* border: solid 1px; */
     box-shadow: 2px 2px 1px black;
     font-size: 1.4rem;
@@ -608,6 +611,7 @@ body > section > p:nth-of-type(2){
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    background: white;
     box-shadow: 4px 5px 1px black;
 }
 
@@ -633,3 +637,136 @@ body > section > p:nth-of-type(2){
     color: #898784;
 }
 
+
+body > section > div:last-of-type {
+    align-self: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 90%;
+    background: white;
+    border: solid 2px black;
+    box-shadow: 4px 5px 1px black;
+}
+
+
+/* make font size bigger in desktop view */
+body > section > div:last-of-type p {
+    font-weight: 600;
+}
+
+body > section > div:last-of-type div {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+body > section > div:last-of-type div button {
+    color: white;
+    font-weight: 600;
+}
+
+body > section > div:last-of-type div button:first-of-type {
+    background: #0755E9;
+}
+
+body > section > div:last-of-type div button:last-of-type {
+    background:#EE4200;
+}
+
+/* change flex-direction to row in desktop view */
+footer {
+    background: #111111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.5rem;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+footer img {
+    width: 80%;
+    height: 70px;
+}
+
+/* change text aling in  desktop view*/
+footer > p {
+    line-height: 1.5;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* change flex-direction to row in desktop view make margin=0 in desktop view */
+footer > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+footer > div >ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer > div >ul >li:first-of-type {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #898784;
+}
+
+footer > div ul a::after {
+    content: ' ';
+    background:#898784;
+    display: none;
+    width: 35%;
+    height: 4px;
+    position: relative;
+    bottom: 0.4rem;
+}
+
+
+footer > div ul a:hover::after {
+    display: inline-block;
+}
+
+footer > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5rem;
+}
+
+footer > div > div p:first-of-type {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #898784;
+}
+
+footer > div > div button {
+    background: #0755E9;
+    border: solid 2px white;
+    box-shadow: 4px 5px 1px white;
+    color: white;
+    font-weight: 500;
+}
+
+footer small {
+    color: #898784;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+/* desktop view */
+@media  screen and (min-width: 800px) {
+    
+}
