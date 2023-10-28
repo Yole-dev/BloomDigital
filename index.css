@@ -111,7 +111,7 @@ nav {
     display: inline-block;
 }
 
-.subNav {
+.mobileSubNav {
     display: none;
     flex-direction: column;
     padding: 0.5rem;
@@ -134,45 +134,8 @@ nav {
     gap: 1.7rem;
 }
 
-.desktopNav ul {
-    list-style: none;
-    display: flex;
-    gap: 0.6rem;
-    font-weight: 600;
-}
-
-.desktopNav ul a {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-/* for the nav underline */
-.desktopNav ul a li::after {
-    content: ' ';
-    background: #0755E9;
-    display: none;
-    width: 35%;
-    height: 4px;
-}
-
-.desktopNav ul a:hover::after {
-    display: inline-block;
-}
-
-.desktopNav ul ion-icon {
-    position: relative;
-    top: 0.3rem;
-}
-
-.desktopNav button {
-    background-color: #0755E9;
-    padding: 1rem;
-    border: solid 2px black ;
-    color: white;
-}
-
 .openNav {
+    display: block;
     font-size: 1.6rem;
 }
 
@@ -205,12 +168,13 @@ header section:first-of-type > p:first-of-type {
     font-weight: 600;
 }
 
-header section:first-of-type > p:nth-child(2) {
+header section:first-of-type > p:nth-of-type(2) {
     text-align: center;
     font-weight: 500;
     margin-top: 1rem;
     color: #898784;
     font-size: 14px;
+    width: auto;
 }
 
 header section:first-of-type > div:first-of-type {
@@ -225,7 +189,7 @@ header section:first-of-type > div:first-of-type > button:first-of-type {
     background: #0755E9;
 }
 
-header section:first-of-type > div:first-of-type > button:nth-child(2) {
+header section:first-of-type > div:first-of-type > button:nth-of-type(2) {
     color: white;
     background: #EE4200;
 }
@@ -258,11 +222,7 @@ header section:last-of-type {
 /* change image scale rotation, position in desktop view */
 
 header section:last-of-type img {
-    width: 150px;
-    position: relative;
-    top: 11.5rem;
-    right: 2.9rem;
-    transform: scale(-1, 1)  rotate(90deg);
+    display: none;
 }
 
 header section:last-of-type > p:first-of-type {
@@ -306,16 +266,16 @@ header section:last-of-type > div > div > div {
 
 header section:last-of-type > div > div > div > p:first-of-type {
     font-weight: 600;
-    padding: 1rem 1.4rem;
+    padding: 1rem 1.3rem;
     border-radius: 50%;
     border: solid 2px black;
     box-shadow: 3px 2px 1px black;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 header section:last-of-type > div > div > div > p:last-of-type {
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 header section:last-of-type > div > div:first-of-type > div > p:first-of-type {
@@ -657,6 +617,7 @@ body > section > div:last-of-type p {
 body > section > div:last-of-type div {
     margin-top: 1rem;
     display: flex;
+    justify-content: center;
     gap: 1.5rem;
 }
 
@@ -768,5 +729,138 @@ footer small {
 
 /* desktop view */
 @media  screen and (min-width: 800px) {
+
+    button{
+        padding: 0.8rem 2rem;
+    }
+
+    nav{
+        padding: 1rem 3rem;
+    }
+
+    .openNav{
+        display: none;
+    }
+
+    .mobileNavContainer {
+        display: none;
+    }
+
+    .desktopNav{
+        display: flex;
+    }
+
+    .desktopNav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        font-weight: 500;
+        position: relative;
+        right: 25rem;
+    }
     
+    .desktopNav ul a {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    /* for the nav underline */
+    .desktopNav ul a li::after {
+        content: ' ';
+        background: #0755E9;
+        display: none;
+        width: 35%;
+        height: 4px;
+    }
+    
+    .desktopNav ul a:hover::after {
+        display: inline-block;
+    }
+    
+    .desktopNav ul ion-icon {
+        position: relative;
+        top: 0.3rem;
+    }
+    
+    .desktopNav button {
+        background-color: #0755E9;
+        border: solid 2px black ;
+        color: white;
+    }
+
+    .desktopNav ul > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .desktopSubNav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        padding: 1rem;
+        top: 3rem;
+        font-weight: 500;
+        background-color: white;
+        border: solid 2px black;
+        box-shadow: 4px 5px 1px black;
+    }
+
+    header > img {
+        top: 7rem;
+    }
+
+    header section:first-of-type {
+        margin-top: 3rem;
+        align-items: start;
+        padding: 3rem;
+    }
+
+    header section:first-of-type > p:first-of-type {
+        text-align: left;
+        font-size: 3rem;
+    }
+
+    header section:first-of-type > p:nth-of-type(2) {
+        text-align: left;
+        width: 300px;
+    }
+
+    header section:first-of-type > div:last-of-type {
+        flex-direction: row;
+        text-align: left;
+        gap: 4rem;
+        margin-top: 2rem;
+    }
+
+    header section:first-of-type > div:last-of-type > p {
+        text-align: left;
+    }
+
+    header section:last-of-type {
+        padding: 0 3rem;
+        margin-top: 2rem;
+    }
+
+    header section:last-of-type img {
+        display: block;
+        width: 150px;
+        position: relative;
+        top: 11.5rem;
+        right: 2.9rem;
+        transform: scale(-1, 1)  rotate(90deg);
+    }
+
+    header section:last-of-type > p:first-of-type {
+        font-size: 2rem;
+    }
+
+    header section:last-of-type > div {
+        flex-direction: row;
+    }
+
+    header section:last-of-type > div > div {
+        width: 30%;
+    }
 }

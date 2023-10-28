@@ -21,20 +21,35 @@ closeNav.addEventListener('click', function(){
     openNav.classList.toggle('displayNone');
 })
 
-const chevronDown = document.querySelector('.chevronDown');
-const chevronUp = document.querySelector('.chevronUp');
-const subNav = document.querySelector('.subNav');
+const mobileChevronDown = document.querySelector('.mobileChevronDown');
+const mobileChevronUp = document.querySelector('.mobileChevronUp');
+const mobileSubNav = document.querySelector('.mobileSubNav');
 
-chevronDown.addEventListener('click', function(){
-    chevronUp.classList.toggle('displayNone');
-    chevronDown.classList.toggle('displayNone');
-    subNav.style.display = 'flex';
+mobileChevronDown.addEventListener('click', function(){
+    mobileChevronUp.classList.toggle('displayNone');
+    mobileChevronDown.classList.toggle('displayNone');
+    mobileSubNav.style.display = 'flex';
 })
 
-chevronUp.addEventListener('click', function(){
-    chevronUp.classList.toggle('displayNone');
-    chevronDown.classList.toggle('displayNone');
-    subNav.style.display = 'none';
+mobileChevronUp.addEventListener('click', function(){
+    mobileChevronUp.classList.toggle('displayNone');
+    mobileChevronDown.classList.toggle('displayNone');
+    mobileSubNav.style.display = 'none';
 })
 
 
+const desktopChevronDown = document.querySelector('.desktopChevronDown');
+const desktopChevronUp = document.querySelector('.desktopChevronUp');
+const desktopSubNav = document.querySelector('.desktopSubNav');
+
+desktopChevronDown.addEventListener('click', function(){
+    desktopChevronUp.classList.toggle('displayNone');
+    desktopChevronDown.classList.toggle('displayNone');
+    desktopSubNav.style.display = 'flex';
+})
+
+desktopChevronUp.addEventListener('click', function(){
+    desktopChevronUp.classList.toggle('displayNone');
+    desktopChevronDown.classList.toggle('displayNone');
+    desktopSubNav.style.display = 'flex';
+})
