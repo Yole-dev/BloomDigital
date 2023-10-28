@@ -51,5 +51,5 @@ desktopChevronDown.addEventListener('click', function(){
 desktopChevronUp.addEventListener('click', function(){
     desktopChevronUp.classList.toggle('displayNone');
     desktopChevronDown.classList.toggle('displayNone');
-    desktopSubNav.style.display = 'flex';
+    desktopSubNav.style.display = 'none';
 })
