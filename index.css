@@ -669,9 +669,10 @@ footer a {
     font-weight: 500;
 }
 
-footer div img {
+footer > div img {
     width: 80%;
     height: 70px;
+    align-self: center;
 }
 
 /* change text aling in  desktop view*/
@@ -1025,6 +1026,7 @@ footer small {
     footer > div img {
         width: 50%;
         height: 60px;
+        align-self: start;
     }
 
     footer > div:first-of-type p {
