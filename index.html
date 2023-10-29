@@ -230,12 +230,12 @@
         <p>Let's see what our clients say about our services</p>
 
         <div class="embla">
-            <div class="controller">
+            <!-- <div class="controller">
                 <button class="embla__prev"><ion-icon name="chevron-back-outline"></ion-icon></button>
                 <button class="embla__next"><ion-icon name="chevron-forward-outline"></ion-icon></button>
-            </div>
+            </div> -->
 
-            <div class="embla__viewport">
+            <!-- <div class="embla__viewport"> -->
                 <div class="embla__container">
 
                             <div class="embla__slide">
@@ -344,7 +344,7 @@
                             </div>
 
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
 
         <div>
@@ -405,39 +405,9 @@
     </footer>
 
     <script src="script.js"></script>
+    <script type="module" src="carousel.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
-    <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
-
-    <script type="text/javascript">
-        const emblaNode = document.querySelector('.embla')
-        const options = { loop: true }
-        const plugins = [EmblaCarouselAutoplay()]
-
-        const embla = EmblaCarousel(emblaNode, options, plugins)
-    </script>
-
-    <!-- script for controlling the carousel/slider -->
-    <!-- <script type="text/javascript">
-            import EmblaCarousel from 'embla-carousel'
-
-            // Grab wrapper nodes
-            const rootNode = document.querySelector('.embla')
-            const viewportNode = rootNode.querySelector('.embla__viewport')
-
-            // Grab button nodes
-            const prevButtonNode = rootNode.querySelector('.embla__prev')
-            const nextButtonNode = rootNode.querySelector('.embla__next')
-
-            // Initialize the carousel
-            const embla = EmblaCarousel(viewport, emblaNode, options, plugins)
-
-            // Add click listeners
-            prevButtonNode.addEventListener('click', embla.scrollPrev, false)
-            nextButtonNode.addEventListener('click', embla.scrollNext, false)
-    </script> -->
       
 
 </body>
