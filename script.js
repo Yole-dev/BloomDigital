@@ -55,3 +55,14 @@ desktopChevronUp.addEventListener('click', function(){
 })
 
 
+
+// script for page loader
+
+const loader = document.querySelector('.pageLoader');
+
+window.addEventListener('load', function(){
+    loader.classList.add('pageLoaderHidden');
+    loader.addEventListener('transitioned', function(){
+        document.body.removeChild(loader);
+    })
+})
