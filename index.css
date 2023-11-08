@@ -17,6 +17,21 @@ button {
     font-weight: 500;
     box-shadow: 4px 5px 1px black;
     font-family: 'Work Sans', sans-serif;
+    animation: 1600ms growBtn alternate infinite ease-in-out;
+}
+
+@keyframes growBtn {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.01);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
 }
 
 a {
@@ -65,6 +80,19 @@ body {
 
 header {
     background: rgb(255, 248, 241);
+    animation: floatInUp 2s ease 1s 1 normal both;
+}
+
+@keyframes floatInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 nav {
@@ -112,7 +140,21 @@ nav {
     border: solid 2px black ;
     padding: 1rem;
     box-shadow: 4px 5px 1px black;
+    animation: myAnim 2s ease 0s 1 normal forwards;
 }
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
 
 .mobileNav ul {
     list-style: none;
@@ -141,6 +183,17 @@ nav {
 
 .mobileNav ul a:hover::after {
     display: inline-block;
+    animation: scaleInCenter 0.25s ease-in 0s 1 normal forwards;
+}
+
+@keyframes scaleInCenter {
+	0% {
+		transform: scaleX(0);
+	}
+
+	100% {
+		transform: scaleX(1);
+	}
 }
 
 .mobileSubNav {
@@ -347,6 +400,19 @@ main {
     flex-direction: column;
     justify-content: center;
     padding: 2.5rem 1rem;
+    animation: fadeInRight 2s ease 1s 1 normal both;
+}
+
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 /* change image rotation, position in desktop view */
@@ -440,43 +506,6 @@ main section:first-of-type div:last-of-type img:last-of-type {
     align-self: flex-end;
 }
 
-/* make these styles display none in desktop view */
-
-/* main section:first-of-type > img:first-of-type {
-    transform: rotate(270deg);
-    position: relative;
-    top: 16.8rem;
-    left: 18rem; 
-    width: 150px;
-}
-
-main section:first-of-type > img:nth-of-type(2) {
-    transform: scale(-1, 1) rotate(270deg);
-    position: relative;
-    top: 30.6rem;
-    width: 130px;
-    margin-top: -13rem;
-}
-
-main section:first-of-type > img:nth-of-type(3) {
-    width: 110px;
-    position: relative;
-    transform: rotate(90deg);
-    bottom: 18.5rem;
-    left: 2.7rem;
-}
-
-main section:first-of-type > img:last-of-type {
-    width: 75px;
-    position: relative;
-    transform: scale(-1, 1)  rotate(90deg);
-    bottom: 25rem;
-    left: 23.8rem;
-    margin-bottom: -8.5rem;
-} */
-
-/* end here */
-
 main > div:first-of-type {
     color: white;
     margin-top: 2rem;
@@ -543,6 +572,19 @@ body > section {
     flex-direction: column;
     background-color: rgb(255, 248, 241);
     text-align: center;
+    animation: fadeInLeft 2s ease 1s 1 normal both;
+}
+
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 body > section > p:first-of-type {
@@ -594,7 +636,6 @@ body > section > p:nth-of-type(2){
     min-width: 0;
     display: flex;
     justify-content: center;
-    gap: 1rem;
 }
 
 .embla__slide > div {
@@ -689,6 +730,19 @@ footer {
     padding: 1rem;
     gap: 1.5rem;
     color: white;
+    animation: fadeInBottom 2s ease 1s 1 normal both;
+}
+
+@keyframes fadeInBottom {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 footer a {
@@ -812,6 +866,7 @@ footer small {
         flex-direction: column;
         gap: 0.5rem;
     }
+
     
     /* for the nav underline */
     .desktopNav ul a li::after {
@@ -824,6 +879,17 @@ footer small {
     
     .desktopNav ul a:hover li::after {
         display: inline-block;
+        animation: scaleInCenter 0.25s ease-in 0s 1 normal forwards;
+    }
+
+    @keyframes scaleInCenter {
+        0% {
+            transform: scaleX(0);
+        }
+    
+        100% {
+            transform: scaleX(1);
+        }
     }
     
     .desktopNav ul ion-icon {
@@ -852,7 +918,53 @@ footer small {
         background-color: white;
         border: solid 2px black;
         box-shadow: 4px 5px 1px black;
+        animation: bounceInTop 1.5s ease-in 0s 1 normal forwards;
     }
+
+    @keyframes bounceInTop {
+        0% {
+            animation-timing-function: ease-in;
+            opacity: 0;
+            transform: translateY(-250px);
+        }
+    
+        38% {
+            animation-timing-function: ease-out;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    
+        55% {
+            animation-timing-function: ease-in;
+            transform: translateY(-65px);
+        }
+    
+        72% {
+            animation-timing-function: ease-out;
+            transform: translateY(0);
+        }
+    
+        81% {
+            animation-timing-function: ease-in;
+            transform: translateY(-28px);
+        }
+    
+        90% {
+            animation-timing-function: ease-out;
+            transform: translateY(0);
+        }
+    
+        95% {
+            animation-timing-function: ease-in;
+            transform: translateY(-8px);
+        }
+    
+        100% {
+            animation-timing-function: ease-out;
+            transform: translateY(0);
+        }
+    }
+    
 
     header > img {
         top: 7rem;
@@ -1011,12 +1123,16 @@ footer small {
         width: 270px;
     }
 
+    .embla__slide {
+        flex: 0 0 50%;
+    }
+
     .embla__slide > div {
-        width: 40%;
+        width: 70%;
     }
 
     .embla {
-        margin-top: -1.5rem;
+        /* margin-top: -1.5rem; */
     }
 
     .controller {

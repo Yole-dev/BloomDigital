@@ -3,6 +3,7 @@
 // default variables
 const navBar = document.querySelector('.navBar');
 const mobileNav = document.querySelector('.mobileNavContainer');
+const subMobileNav = document.querySelector('.mobileNav');
 const openNav = document.querySelector('.openNav');
 const closeNav = document.querySelector('.closeNav');
 
@@ -12,6 +13,7 @@ openNav.addEventListener('click', function(){
     mobileNav.style.display = 'flex';
     openNav.classList.toggle('displayNone');
     closeNav.classList.toggle('displayNone');
+    subMobileNav.style.animationDirection = 'normal';
 })
 
 closeNav.addEventListener('click', function(){
@@ -19,6 +21,7 @@ closeNav.addEventListener('click', function(){
     mobileNav.style.display = 'none';
     closeNav.classList.toggle('displayNone');
     openNav.classList.toggle('displayNone');
+    subMobileNav.style.animationDirection = 'reverse';
 })
 
 const mobileChevronDown = document.querySelector('.mobileChevronDown');
@@ -66,3 +69,5 @@ window.addEventListener('load', function(){
         document.body.removeChild(loader);
     })
 })
+
+// script for page animation 
