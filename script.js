@@ -70,4 +70,16 @@ window.addEventListener('load', function(){
     })
 })
 
-// script for page animation 
+// script for page on scroll transitions
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+})
+const elements = document.querySelectorAll('.animate');
+elements.forEach((el) => observer.observe(el));
