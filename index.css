@@ -70,9 +70,9 @@ a {
 /* styles for on scroll transitions */
 .animate {
     opacity: 0;
-    filter: blur(4px);
+    filter: blur(5px);
     transform: translateX(-100%);
-    transition: all 1s;
+    transition: all 1s linear;
 }
 
 .show {
@@ -82,7 +82,7 @@ a {
 }
 
 @media(prefers-reduced-motion) {
-    .hidden{
+    .animate{
         transition: none;
     }
 }
@@ -143,10 +143,10 @@ nav {
     border: solid 2px black ;
     padding: 1rem;
     box-shadow: 4px 5px 1px black;
-    animation: myAnim 2s ease 0s 1 normal forwards;
+    animation: moveInLeft 2s ease 0s 1 normal forwards;
 }
 
-@keyframes myAnim {
+@keyframes moveInLeft {
 	0% {
 		opacity: 0;
 		transform: translateX(-250px);
